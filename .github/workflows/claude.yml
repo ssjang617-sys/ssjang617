@@ -1,3 +1,6 @@
+mkdir -p .github/workflows
+
+cat > .github/workflows/claude.yml << 'EOF'
 name: Claude Code
 
 on:
@@ -19,3 +22,4 @@ jobs:
       - uses: anthropics/claude-code-action@v1
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+EOF
